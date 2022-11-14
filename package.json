@@ -1,0 +1,14 @@
+{
+  "name": "typescript-ddd",
+  "version": "0.1.0",
+  "description": "practice ddd by typescript",
+  "keywords": [
+    "typescript",
+    "ddd"
+  ],
+  "author": "tarunama",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
