@@ -1,4 +1,4 @@
-class Name {
+export class Name {
     firstName: string;
     lastName: string;
 
@@ -12,11 +12,19 @@ class Name {
         lastName = lastName;
     }
 
-    public getFirstName() {
+    public getFirstName(): string {
         return this.firstName;
     }
 
-    public getLastName() {
+    public getLastName(): string {
         return this.lastName;
+    }
+
+    public equals(other: Name): boolean {
+        if (other === null || other === undefined) {
+            return false;
+        }
+        return other.firstName === this.firstName
+          && other.lastName === this.lastName;
     }
 }
