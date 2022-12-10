@@ -1,6 +1,6 @@
 export class Name {
-    firstName: string;
-    lastName: string;
+    private readonly firstName: string;
+    private readonly lastName: string;
 
     constructor(firstName: string, lastName: string) {
         this.firstName = firstName;
