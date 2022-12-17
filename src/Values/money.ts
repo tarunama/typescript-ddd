@@ -1,9 +1,11 @@
+import { isNull, isUndefined } from "../utils/is";
+
 export class Money {
     public readonly amount: number;
     public readonly currency: string;
 
     constructor(amount: number, currency: string) {
-        if (currency === null || currency === undefined) {
+        if (isNull(currency) || isUndefined(currency)) {
             throw new Error()
         }
 
@@ -12,7 +14,7 @@ export class Money {
     }
 
     public add(money: Money): Money {
-        if (money === null || money === undefined) {
+        if (isNull(money) || isUndefined(money)) {
             throw new Error("null exception");
         }
         if (this.currency !== money.currency) {

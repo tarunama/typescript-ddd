@@ -1,3 +1,5 @@
+import { isNull, isUndefined } from "../utils/is";
+
 export class Name {
     private readonly firstName: string;
     private readonly lastName: string;
@@ -21,7 +23,7 @@ export class Name {
     }
 
     public equals(other: Name): boolean {
-        if (other === null || other === undefined) {
+        if (isNull(other) || isUndefined(other)) {
             return false;
         }
         return other.firstName === this.firstName
