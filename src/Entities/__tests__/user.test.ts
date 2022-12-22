@@ -1,3 +1,5 @@
+import { test, expect } from "vitest"
+
 import { User, UserId } from "../user";
 
 test('equal method', () => {

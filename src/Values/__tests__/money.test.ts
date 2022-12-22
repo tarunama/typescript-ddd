@@ -1,3 +1,5 @@
+import { test, expect } from "vitest"
+
 import { Money } from "../money";
 
 test('add method', () => {
