@@ -1,3 +1,5 @@
+import { test, expect } from "vitest"
+
 import { isNull, isUndefined } from "../is"
 
 test("isNull", () => {
