@@ -5,6 +5,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.47.0
   '@typescript-eslint/parser': ^5.47.0
   eslint: ^8.30.0
+  prettier: ^2.8.1
   ts-node: ^10.9.1
   typescript: ^4.8.4
   vite: ^4.0.3
@@ -15,6 +16,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.47.0_dvmqlqg4r5ba7a4i47pzcunkky
   '@typescript-eslint/parser': 5.47.0_f5jcydormhcqaoeadqwgqigppy
   eslint: 8.30.0
+  prettier: 2.8.1
   ts-node: 10.9.1_zhirybrk4zoofuxp64necizyzy
   typescript: 4.9.3
   vite: 4.0.3_@types+node@18.11.11
@@ -1222,6 +1224,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /punycode/2.1.1:
