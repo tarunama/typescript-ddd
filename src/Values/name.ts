@@ -9,11 +9,6 @@ export class Name {
     this.lastName = lastName;
   }
 
-  public fullName(firstName: string, lastName: string) {
-    firstName = firstName;
-    lastName = lastName;
-  }
-
   public getFirstName(): string {
     return this.firstName;
   }
