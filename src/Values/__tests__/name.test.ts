@@ -1,8 +1,8 @@
-import { test, expect } from "vitest"
+import { test, expect } from "vitest";
 
 import { Name } from "../name";
 
-test('equal method', () => {
+test("equal method", () => {
   const yamadaTarou = new Name("yamada", "tarou");
   const tarouYamada = new Name("yamada", "tarou");
 
