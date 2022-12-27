@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from "../utils/is";
+import { isNull, isUndefined } from "../../utils/is";
 
 export class UserId {
   private id: string;

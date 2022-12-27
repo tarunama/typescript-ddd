@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from "../utils/is";
+import { isNull, isUndefined } from "../../utils/is";
 
 export class Money {
   public readonly amount: number;
