@@ -1,8 +1,9 @@
-import { User } from "@/Domain/Entities/user";
+import { User, UserId } from "@/Domain/Entities/user";
+import { clone } from "@/utils";
 
 export interface IUserRepository {
   save(user: User): void;
-  find(userName: string): void;
+  find(userName: string): null | User;
 }
 
 export class UserRepository implements IUserRepository {
@@ -16,11 +17,37 @@ export class UserRepository implements IUserRepository {
     }
   }
 
-  find(userName: string): void {
+  find(userName: string): null | User {
     try {
       // find User
     } catch (error) {
       console.error(error);
+    }
+    return null;
+  }
+}
+
+export class InMemoryUserRepository implements IUserRepository {
+  dictionary: Map<UserId, User> = new Map();
+
+  save(user: User): void {
+    this.dictionary.set(user.id, clone(user));
+  }
+
+  find(userName: string): User | null {
+    let target = null;
+
+    for (const ele of this.dictionary.values()) {
+      if (ele.name === userName) {
+        target = ele;
+        break;
+      }
+    }
+
+    if (target === null) {
+      return null;
+    } else {
+      return clone<User>(target);
     }
   }
 }

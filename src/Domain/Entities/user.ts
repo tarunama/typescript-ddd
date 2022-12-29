@@ -13,7 +13,7 @@ export class UserId {
 }
 
 export class User {
-  private readonly id: UserId;
+  readonly id: UserId;
   name: string;
 
   constructor(id: UserId, name: string) {
