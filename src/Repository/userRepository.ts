@@ -1,5 +1,5 @@
 import { User, UserId } from "@/Domain/Entities/user";
-import { clone } from "@/utils";
+import { clone } from "../utils";
 
 export interface IUserRepository {
   save(user: User): void;
