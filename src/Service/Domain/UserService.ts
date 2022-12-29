@@ -1,11 +1,11 @@
 import { User } from "@/Domain/Entities/user";
-import { IUserRepository, UserRepository } from "@/Repository/useRepository";
+import { IUserRepository } from "@/Repository/useRepository";
 
 export class UserService {
   private userRepository: IUserRepository;
 
-  constructor() {
-    this.userRepository = new UserRepository();
+  constructor(userRepository: IUserRepository) {
+    this.userRepository = userRepository;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
