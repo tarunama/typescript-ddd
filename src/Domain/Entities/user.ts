@@ -14,7 +14,7 @@ export class UserId {
 
 export class User {
   private readonly id: UserId;
-  private name: string;
+  name: string;
 
   constructor(id: UserId, name: string) {
     if (isNull(id) || isUndefined(id)) {
