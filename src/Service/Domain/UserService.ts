@@ -2,7 +2,7 @@ import { User } from "@/Domain/Entities/user";
 import { IUserRepository } from "@/Repository/userRepository";
 
 export class UserService {
-  private userRepository: IUserRepository;
+  private readonly userRepository: IUserRepository;
 
   constructor(userRepository: IUserRepository) {
     this.userRepository = userRepository;
