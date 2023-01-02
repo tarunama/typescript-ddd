@@ -13,8 +13,8 @@ export class UserId {
 }
 
 export class User {
-  private readonly id: UserId;
-  private name: string;
+  readonly id: UserId;
+  name: string;
 
   constructor(id: UserId, name: string) {
     if (isNull(id) || isUndefined(id)) {
