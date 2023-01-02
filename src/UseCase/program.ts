@@ -11,7 +11,7 @@ export class Program {
 
   createUser(userName: string): void {
     const id = new UserId("id");
-    const user = new User(id, userName);
+    const user = new User(userName, id);
     const userService = new UserService(this.userRepository);
 
     if (userService.exist(user)) {

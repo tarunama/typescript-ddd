@@ -16,7 +16,7 @@ export class User {
   readonly id: UserId;
   name: string;
 
-  constructor(id: UserId, name: string) {
+  constructor(name: string, id?: UserId, isNew = false) {
     if (isNull(id) || isUndefined(id)) {
       throw new Error("id requires UserId instance");
     }
@@ -24,7 +24,7 @@ export class User {
       throw new Error("nameは1文字以上の文字列を期待しています");
     }
 
-    this.id = id;
+    this.id = isNew ? new UserId("new") : id;
     this.name = this.changeName(name);
   }
 
