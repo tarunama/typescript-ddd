@@ -3,7 +3,9 @@ import { clone } from "../utils";
 
 export interface IUserRepository {
   save(user: User): void;
+  find(userId: UserId): null | User;
   find(userName: string): null | User;
+  delete(user: User): void;
 }
 
 export class UserRepository implements IUserRepository {
@@ -49,5 +51,9 @@ export class InMemoryUserRepository implements IUserRepository {
     } else {
       return clone<User>(target);
     }
+  }
+
+  delete(user: User): void {
+    // TODO: impl
   }
 }

@@ -10,13 +10,17 @@ export class UserId {
 
     this.id = id;
   }
+
+  public get value(): string {
+    return this.id;
+  }
 }
 
 export class User {
-  readonly id: UserId;
+  readonly id: string;
   name: string;
 
-  constructor(id: UserId, name: string) {
+  constructor(name: string, id?: string, isNew = false) {
     if (isNull(id) || isUndefined(id)) {
       throw new Error("id requires UserId instance");
     }
@@ -24,7 +28,7 @@ export class User {
       throw new Error("nameは1文字以上の文字列を期待しています");
     }
 
-    this.id = id;
+    this.id = isNew ? new UserId("new").value : id;
     this.name = this.changeName(name);
   }
 
